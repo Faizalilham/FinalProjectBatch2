@@ -1,10 +1,12 @@
 package com.example.finalprojectbatch2
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.finalprojectbatch2.API.APIService
 import com.example.finalprojectbatch2.API.ListRespon
 import com.example.finalprojectbatch2.model.Model
@@ -27,7 +29,14 @@ class ActivityDetailBarang : AppCompatActivity() {
 
         val id = intent.getIntExtra("id", 0)
         Log.d("id barang", "$id ")
-
+    }
+    private fun alert(){
+        val alert = AlertDialog.Builder(this)
+        alert.setTitle("Peringatan")
+        alert.setMessage("Apakah anda yakin ingin menghapus data ini ? ")
+        alert.setPositiveButton("Ya",{ dialogInterface: DialogInterface, i: Int -> DeleteBarang() })
+        alert.setNegativeButton("Tidak",{ dialogInterface: DialogInterface, i: Int -> })
+        alert.show()
     }
 
     private fun DeleteBarang(){
@@ -35,6 +44,8 @@ class ActivityDetailBarang : AppCompatActivity() {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if(response.isSuccessful){
                     Toast.makeText(applicationContext,"Delete Data Success",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@ActivityDetailBarang,MainActivity2::class.java))
+                    finish()
                 }
             }
 
@@ -47,9 +58,8 @@ class ActivityDetailBarang : AppCompatActivity() {
     }
     private fun BtnDelete(){
         binding.imgdelete.setOnClickListener {
-            DeleteBarang()
-            startActivity(Intent(this,MainActivity2::class.java))
-            finish()
+            alert()
+
         }
     }
 

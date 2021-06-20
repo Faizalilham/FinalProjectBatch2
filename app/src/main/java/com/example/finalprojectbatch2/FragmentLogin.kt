@@ -49,8 +49,9 @@ class FragmentLogin : Fragment() {
                             Constant.SetUsername(activity!!,body.data.username)
                             Constant.SetNama(activity!!,body.data.name)
                             Constant.SetToken(activity!!,body.data.token)
+                            Constant.SetEmail(activity!!,body.data.email)
                             Toast.makeText(activity,"Hai ${body.data.username}",Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(activity,MainActivity2::class.java).also {
+                            startActivity(Intent(activity!!,MainActivity2::class.java).also {
                                 activity!!.finish()
                             })
 
@@ -70,7 +71,6 @@ class FragmentLogin : Fragment() {
     private fun BtnSignIn(){
         binding.ButtonSignIn.setOnClickListener {
             Login()
-
         }
     }
     private fun IsLogin(){

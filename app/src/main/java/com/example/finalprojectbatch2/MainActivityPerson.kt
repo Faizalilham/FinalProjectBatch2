@@ -15,19 +15,32 @@ class MainActivityPerson : AppCompatActivity() {
         setContentView(binding.root)
         Logout()
         GetData()
+        back()
     }
+
     private fun Logout(){
         binding.BtnLogout.setOnClickListener {
             Constant.ClearToken(this)
             Constant.ClearNama(this)
             Constant.ClearUsername(this)
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
+            Constant.ClearEmail(this)
+            startActivity(Intent(this,MainActivity::class.java).also {
+                finish()
+            })
+
         }
     }
     private fun GetData(){
-     binding.TvNama.text = "Welcome "+Constant.GetNama(this)
+     binding.TvNama.text = "Haii "+Constant.GetNama(this)+" Nice to meet you againt"
      binding.TVUsername.text = "Username : " +Constant.GetUsername(this)
+     binding.TVEmail.text = "Email : " +Constant.GetEmail(this)
+
+    }
+    private fun back(){
+        binding.backtoearly.setOnClickListener {
+            startActivity(Intent(this,MainActivity2::class.java))
+            finish()
+        }
 
     }
 }

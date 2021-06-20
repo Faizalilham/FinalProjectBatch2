@@ -29,11 +29,11 @@ class MainActivity2 : AppCompatActivity() {
         super.onResume()
         GetBarang()
 
+
     }
     private fun BotNav(){
         binding.BotNav.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.Home -> startActivity(Intent(this,MainActivity2::class.java))
                 R.id.Plus -> startActivity(Intent(this,MainActivityAdd::class.java))
                 R.id.Person -> startActivity(Intent(this,MainActivityPerson::class.java))
             }

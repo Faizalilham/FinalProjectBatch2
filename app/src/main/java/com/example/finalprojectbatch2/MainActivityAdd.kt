@@ -23,6 +23,7 @@ class MainActivityAdd : AppCompatActivity() {
         ButtonAdd()
         getdata()
         ButtonUpdate()
+        ButtonBack()
     }
     private fun AddBarang(){
         val nama = binding.ETNamaBarang.text.toString()
@@ -78,6 +79,12 @@ class MainActivityAdd : AppCompatActivity() {
     private fun ButtonUpdate(){
         binding.ButtonnUpdate.setOnClickListener {
             UpdateBarang()
+            startActivity(Intent(this,MainActivity2::class.java))
+            finish()
+        }
+    }
+    private fun ButtonBack(){
+        binding.backtoearly.setOnClickListener {
             startActivity(Intent(this,MainActivity2::class.java))
             finish()
         }

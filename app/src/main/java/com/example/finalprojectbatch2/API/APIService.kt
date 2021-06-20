@@ -83,5 +83,21 @@ class Constant{
            val delete = context.getSharedPreferences("Token",Context.MODE_PRIVATE)
            delete.edit().clear().apply()
        }
+       fun SetEmail(context: Context,Email :String){
+           val email = context.getSharedPreferences("Token",Context.MODE_PRIVATE)
+           email.edit().apply {
+               putString("Email",Email)
+               apply()
+           }
+       }
+       fun GetEmail(context: Context):String?{
+           val name_email = context.getSharedPreferences("Token",Context.MODE_PRIVATE)
+           val registemail = name_email.getString("Email","email")
+           return registemail
+       }
+       fun ClearEmail(context: Context){
+           val delete_email = context.getSharedPreferences("Token",Context.MODE_PRIVATE)
+           delete_email.edit().clear().apply()
+       }
    }
 }

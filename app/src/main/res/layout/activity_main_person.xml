@@ -1,69 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative"
     tools:context=".MainActivityPerson"
+    android:background="@color/lightblue"
     >
-
-
+    <TextView
+        android:id="@+id/backtoearly"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:textAlignment="viewStart"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/back"/>
+    <ImageView
+        android:id="@+id/faceimage"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/faceimage"/>
+    <TextView
+        android:id="@+id/Accountuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Account"
+        android:layout_toEndOf="@id/faceimage"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"/>
     <TextView
         android:id="@+id/TvNama"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/lightblue"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/faceimage"
+        android:layout_below="@id/Accountuser"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/BtnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightblue2"
+        android:text="Logout"
         android:textStyle="bold"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="95dp"
+        android:layout_alignParentRight="true"/>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/account" />
-
+        android:layout_below="@+id/faceimage"
+        android:background="@drawable/backgroundprofile"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Status : Login"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="My Profile"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/TVUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/BtnLogout"
+        <TextView
+            android:id="@+id/TVEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Logout" />
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Age : 18 years old"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Gender : Male"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Profession : Student of PHB Tegal University"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

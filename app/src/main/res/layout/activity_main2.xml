@@ -11,6 +11,7 @@
         android:id="@+id/Rcy"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/silver"
         app:layout_constraintBottom_toTopOf="@+id/BotNav"
         app:layout_constraintTop_toTopOf="parent" />
 

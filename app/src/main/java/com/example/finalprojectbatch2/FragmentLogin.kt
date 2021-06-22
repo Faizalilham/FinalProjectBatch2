@@ -71,6 +71,7 @@ class FragmentLogin : Fragment() {
     private fun BtnSignIn(){
         binding.ButtonSignIn.setOnClickListener {
             Login()
+
         }
     }
     private fun IsLogin(){
@@ -81,6 +82,12 @@ class FragmentLogin : Fragment() {
             })
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        IsLogin()
+    }
+
 
 
 

@@ -28,8 +28,11 @@ class MainActivity2 : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         GetBarang()
+    }
 
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
     private fun BotNav(){
         binding.BotNav.setOnNavigationItemSelectedListener {

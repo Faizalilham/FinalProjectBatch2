@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import com.example.finalprojectbatch2.API.APIService
 import com.example.finalprojectbatch2.API.Constant
 import com.example.finalprojectbatch2.model.Model
 import com.example.finalprojectbatch2.API.SingleRespon
 import com.example.finalprojectbatch2.databinding.FragmentRegistBinding
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,6 +30,7 @@ class FragmentRegist : Fragment() {
         return binding.root
 
     }
+
 
     private fun Regist(){
         val name = binding.ETNameSignUp.text.toString()
@@ -62,7 +65,10 @@ class FragmentRegist : Fragment() {
     private fun BtnSIgnUp(){
         binding.ButtonSignUp.setOnClickListener {
             Regist()
+            activity?.finish()
         }
 
     }
+
+
 }

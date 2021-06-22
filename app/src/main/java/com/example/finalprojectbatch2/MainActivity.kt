@@ -19,19 +19,23 @@ class MainActivity : AppCompatActivity() {
         Tabnav()
     }
 
+
     override fun onBackPressed() {
-       val alert = AlertDialog.Builder(this)
-        alert.setTitle("Peringatan")
-        alert.setMessage("Apakah anda yakin ingin keluar ?")
-        alert.setPositiveButton("Ya",{ dialogInterface: DialogInterface, i: Int -> finish()})
-        alert.setNegativeButton("Tidak",{ dialogInterface: DialogInterface, i: Int -> })
-        alert.show()
+        alert()
     }
 
     private fun Tabnav(){
         val FragmentAdapter = TabNavAdapter(supportFragmentManager)
         binding.Pagar.adapter = FragmentAdapter
         binding.Tablayout.setupWithViewPager(binding.Pagar)
+    }
+    private fun alert(){
+        val alert = AlertDialog.Builder(this)
+        alert.setTitle("Warning!")
+        alert.setMessage("Do you want to exit ?")
+        alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int -> finish()})
+        alert.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })
+        alert.show()
     }
 
 }

@@ -13,8 +13,8 @@ class MainActivityPerson : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainPersonBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Logout()
         GetData()
+        Logout()
         back()
     }
 

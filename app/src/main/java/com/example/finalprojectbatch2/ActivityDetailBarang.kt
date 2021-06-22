@@ -32,10 +32,10 @@ class ActivityDetailBarang : AppCompatActivity() {
     }
     private fun alert(){
         val alert = AlertDialog.Builder(this)
-        alert.setTitle("Peringatan")
-        alert.setMessage("Apakah anda yakin ingin menghapus data ini ? ")
-        alert.setPositiveButton("Ya",{ dialogInterface: DialogInterface, i: Int -> DeleteBarang() })
-        alert.setNegativeButton("Tidak",{ dialogInterface: DialogInterface, i: Int -> })
+        alert.setTitle("Warning!")
+        alert.setMessage("are you sure you want to delete this data ? ")
+        alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int -> DeleteBarang() })
+        alert.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })
         alert.show()
     }
 

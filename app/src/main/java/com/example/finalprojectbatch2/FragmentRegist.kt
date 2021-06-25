@@ -39,7 +39,7 @@ class FragmentRegist : Fragment() {
         val password = binding.ETPasswordSignUp.text.toString()
 
       if(binding.ETUsernameSignUp.text.isNullOrEmpty() && binding.ETPasswordSignUp.text.isNullOrEmpty()){
-          Toast.makeText(activity,"Please answer all the questions",Toast.LENGTH_SHORT).show()
+          Toast.makeText(activity,"Create Account failed, please fill in all data",Toast.LENGTH_SHORT).show()
       }else{
           APIService.APIEndPoint().SignUp(name, username, email, password).enqueue(object : Callback<SingleRespon<Model>>{
               override fun onResponse(

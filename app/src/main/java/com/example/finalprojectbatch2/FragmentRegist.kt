@@ -38,7 +38,7 @@ class FragmentRegist : Fragment() {
         val email = binding.ETEmailSignUp.text.toString()
         val password = binding.ETPasswordSignUp.text.toString()
 
-      if(binding.ETUsernameSignUp.text.isNullOrEmpty() && binding.ETPasswordSignUp.text.isNullOrEmpty()){
+      if(binding.ETUsernameSignUp.text.isNullOrEmpty() && binding.ETPasswordSignUp.text.isNullOrEmpty() && binding.ETNameSignUp.text.isNullOrEmpty() && binding.ETEmailSignUp.text.isNullOrEmpty()){
           Toast.makeText(activity,"Create Account failed, please fill in all data",Toast.LENGTH_SHORT).show()
       }else{
           APIService.APIEndPoint().SignUp(name, username, email, password).enqueue(object : Callback<SingleRespon<Model>>{

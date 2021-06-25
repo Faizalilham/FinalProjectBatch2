@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         alert()
+        finish()
     }
 
     private fun Tabnav(){

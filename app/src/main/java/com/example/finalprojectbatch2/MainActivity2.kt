@@ -37,8 +37,8 @@ class MainActivity2 : AppCompatActivity() {
     private fun BotNav(){
         binding.BotNav.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.Plus -> startActivity(Intent(this,MainActivityAdd::class.java))
-                R.id.Person -> startActivity(Intent(this,MainActivityPerson::class.java))
+                R.id.Plus -> startActivity(Intent(this,MainActivityAdd::class.java).also { finish() })
+                R.id.Person -> startActivity(Intent(this,MainActivityPerson::class.java).also { finish() })
             }
             true
         }

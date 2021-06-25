@@ -85,9 +85,18 @@ class MainActivityAdd : AppCompatActivity() {
     }
     private fun ButtonBack(){
         binding.backtoearly.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
-            finish()
+            startActivity(Intent(this,MainActivity2::class.java).also {
+                finish()
+            })
+
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,MainActivity2::class.java).also {
+            finish()
+        })
     }
 
 

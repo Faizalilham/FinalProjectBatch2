@@ -65,7 +65,6 @@ class FragmentRegist : Fragment() {
     private fun BtnSIgnUp(){
         binding.ButtonSignUp.setOnClickListener {
             Regist()
-            activity?.finish()
         }
 
     }

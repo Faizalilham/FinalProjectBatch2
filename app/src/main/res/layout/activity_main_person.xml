@@ -89,34 +89,6 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:text="Age : 18 years old"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:text="Gender : Male"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="10dp"
-            android:text="Profession : Student of PHB Tegal University"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
     </LinearLayout>
-
 
 </RelativeLayout>

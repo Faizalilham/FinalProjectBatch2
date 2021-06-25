@@ -36,7 +36,7 @@ class FragmentLogin : Fragment() {
         val username = binding.ETUsername.text.toString()
         val password = binding.ETPassword.text.toString()
         if (binding.ETUsername.text.isNullOrEmpty() && binding.ETPassword.text.isNullOrEmpty()){
-            Toast.makeText(activity,"Username dan Password Wajib Diisi",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Username and Password cannot be empty",Toast.LENGTH_SHORT).show()
         }else{
             APIService.APIEndPoint().SignIn(username, password).enqueue(object : Callback<SingleRespon<Model>>{
                 override fun onResponse(

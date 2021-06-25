@@ -33,7 +33,7 @@ class ActivityDetailBarang : AppCompatActivity() {
     private fun alert(){
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Warning!")
-        alert.setMessage("are you sure you want to delete this data ? ")
+        alert.setMessage("are you sure want to delete this item ? ")
         alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int -> DeleteBarang() })
         alert.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })
         alert.show()
@@ -43,7 +43,7 @@ class ActivityDetailBarang : AppCompatActivity() {
         APIService.APIEndPoint().DeleteById(intent.getIntExtra("id",1)).enqueue(object : Callback<Void>{
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if(response.isSuccessful){
-                    Toast.makeText(applicationContext,"Delete Data Success",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"The item has been deleted",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@ActivityDetailBarang,MainActivity2::class.java))
                     finish()
                 }

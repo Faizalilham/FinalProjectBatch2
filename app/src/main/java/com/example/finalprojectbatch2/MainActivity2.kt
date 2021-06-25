@@ -50,7 +50,7 @@ class MainActivity2 : AppCompatActivity() {
                     val body = response.body()
                     if(body != null){
                         ShowRcy(body.data)
-                        Toast.makeText(applicationContext,"Get Data Success",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext,"Get the item successfully",Toast.LENGTH_SHORT).show()
                     }
                 }
             }

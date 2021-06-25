@@ -33,10 +33,10 @@ class MainActivityAdd : AppCompatActivity() {
             override fun onResponse(call: Call<SingleRespon<Barang>>, response: Response<SingleRespon<Barang>>) {
                 if(response.isSuccessful){
                     val body = response.body()
-                    Toast.makeText(applicationContext,"Post Barang Success",Toast.LENGTH_SHORT).show()
-                    println("Success Post Barang "+body)
+                    Toast.makeText(applicationContext,"Item has been added",Toast.LENGTH_SHORT).show()
+                    println("Item has been added "+body)
                 }else{
-                    Toast.makeText(applicationContext,"Error Post Barang",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Error Added Item",Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -66,8 +66,8 @@ class MainActivityAdd : AppCompatActivity() {
             override fun onResponse(call: Call<SingleRespon<Barang>>, response: Response<SingleRespon<Barang>>) {
                 if(response.isSuccessful){
                     val body = response
-                    Toast.makeText(applicationContext,"Update Barang Success",Toast.LENGTH_SHORT).show()
-                    println("Success Update Barang "+body)
+                    Toast.makeText(applicationContext,"The Item has been updated",Toast.LENGTH_SHORT).show()
+                    println("The Item has been updated "+body)
                 }
             }
 

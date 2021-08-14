@@ -46,6 +46,7 @@ class MainActivityPerson : AppCompatActivity() {
     private fun alert(){
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Warning!")
+        alert.setIcon(R.drawable.warning)
         alert.setMessage("Do you want to exit ?")
         alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int ->
             startActivity(Intent(this,MainActivity::class.java).also {

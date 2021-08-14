@@ -11,7 +11,7 @@ import com.example.finalprojectbatch2.Adapter.TabNavAdapter
 import com.example.finalprojectbatch2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private fun alert(){
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Warning!")
+        alert.setIcon(R.drawable.warning)
         alert.setMessage("Do you want to exit ?")
         alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int -> finish()})
         alert.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })

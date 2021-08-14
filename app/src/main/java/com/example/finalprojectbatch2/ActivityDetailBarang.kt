@@ -26,13 +26,19 @@ class ActivityDetailBarang : AppCompatActivity() {
         GetbyId()
         BtnDelete()
         ButtonBack()
-
         val id = intent.getIntExtra("id", 0)
         Log.d("id barang", "$id ")
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,MainActivity2::class.java))
+        finish()
     }
     private fun alert(){
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Warning!")
+        alert.setIcon(R.drawable.warning)
         alert.setMessage("are you sure want to delete this item ? ")
         alert.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int -> DeleteBarang() })
         alert.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> })

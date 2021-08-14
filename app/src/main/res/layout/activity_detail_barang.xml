@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Detail Data"
+            android:text="Detail Item"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textColor="@color/white"

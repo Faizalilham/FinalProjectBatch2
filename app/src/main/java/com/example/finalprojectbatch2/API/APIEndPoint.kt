@@ -47,7 +47,7 @@ interface APIEndPoint {
 data class ListRespon<T>(
         var msg : String,
         var status : Int,
-        var data : List<T>
+        var data : MutableList<Barang>
 )
 data class SingleRespon<T>(
         var msg : String,
